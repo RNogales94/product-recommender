@@ -9,7 +9,7 @@
   <script src="js/navbar.js"></script>
 
 
-  <title>Recomendador</title>
+  <title>Admin Recomendador</title>
 </head>
 <body>
   <nav class="navbar is-info">
@@ -76,11 +76,11 @@
             </p>
             -->
             <p class="control">
-              <a class="button" href="./admin.html">
+              <a class="button is-danger" href="./index.html">
                 <span class="icon">
-                  <i class="fas fa-sign-in-alt"></i>
+                  <i class="fas fa-sign-out-alt"></i>
                 </span>
-                <span>Login</span>
+                <span>Logout</span>
               </a>
             </p>
           </div>
@@ -92,10 +92,10 @@
   <div class="hero-body">
     <div class="container">
         <h1 class="title">
-          Recomendador de productos
+          Bot Admin
         </h1>
         <h2 class="subtitle">
-          El bot de telegram
+          Panel de administracion
         </h2>
     </div>
   </div>
@@ -103,36 +103,50 @@
 
 <section class="section">
   <div class="container">
-        <h1 class="title">Accede al bot</h1>
-        <h2 class="subtitle">
-          Puedes usar nuestro <strong>bot</strong> si tienes una cuenta de telegram escribiendo a: <a href="http://t.me/form_backend_bot">reco_bot</a>
-        </h2>
-      </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="columns">
-      <div class="column is-8">
-        <h1 class="title">Pruebalo aquí mismo</h1>
-        <h2 class="subtitle">
-          Puedes simular el comportamiento del bot con este pequeño formulario
-        </h2>
-      </div>
-      <div class="column">
-        <div class="field is-grouped">
-          <p class="control is-expanded">
-            <input class="input" type="text" placeholder="¿Qué buscas?">
-          </p>
-          <p class="control">
-            <a class="button is-info">
-              Search
-            </a>
-          </p>
+      <h1 class="title">Mi Cuenta</h1>
+      <div class="field">
+        <label class="label">Channel Name</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="@chollos">
         </div>
       </div>
-    </div>
+      <div class="field">
+        <label class="label">Tu alias de telegram</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="@paquito">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Usuarios que pueden publicar en tu canal</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="@paquito, @juanita, @rodolfa">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Descripcion del canal</label>
+        <div class="control">
+          <input class="input" type="email" placeholder="">
+        </div>
+      </div>
+      <h1 class="title">Token de seguridad</h1>
+
+      <div class="field disabled">
+        <label class="label">Tu token de seguridad</label>
+        <div class="control">
+          <input class="input" type="email" value="78S6FS8D76FFSD65FSD76F5" readonly>
+        </div>
+      </div>
+
+      <h2 class="title">Información importante</h2>
+      <p>Para poder recuperar el acceso al panel de administración en caso de haberlo perdido
+      recomendamos añadir un numero de telefono al que enviar un nuevo token si pierde el acceso</p>
+
+      <p>Importante, el acceso se perderá si usted cambia su alias de telegram o el alias del canal</p>
+      <p>En ese caso deberá generar un nuevo token de seguridad utilizando el comando "/generateToken @nombre_canal" </p>
+      
+
   </div>
 </section>
+
 </body>
 </html>
