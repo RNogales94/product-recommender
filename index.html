@@ -6,19 +6,59 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () => {
 
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach( el => {
+          el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+      }
+
+    });
+  </script>
   <title>Recomendador</title>
 </head>
 <body>
+  <nav class="navbar is-info" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="#">
+      <img src="https://bulma.io/images/bulma-logo.png" alt="Reco-bot logo" width="112" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="true">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+</nav>
   <section class="hero is-info">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title">
-        Recomendador de productos
-      </h1>
-      <h2 class="subtitle">
-        El bot de telegram
-      </h2>
+        <h1 class="title">
+          Recomendador de productos
+        </h1>
+        <h2 class="subtitle">
+          El bot de telegram
+        </h2>
     </div>
   </div>
 </section>
@@ -27,11 +67,9 @@
   <div class="container">
         <h1 class="title">Accede al bot</h1>
         <h2 class="subtitle">
-          Puedes usar nuestro <strong>bot</strong> si tienes una cuenta de telegram hablandole a: <a href="http://t.me/form_backend_bot">reco_bot</a>
+          Puedes usar nuestro <strong>bot</strong> si tienes una cuenta de telegram escribiendo a: <a href="http://t.me/form_backend_bot">reco_bot</a>
         </h2>
       </div>
 </section>
-
-
 </body>
 </html>
